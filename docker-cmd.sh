@@ -1,10 +1,13 @@
 #!/bin/sh
 
 # Trap SIGTERM and SIGINT
-trap 'bash bin/apacheds.sh stop; exit $?' TERM INT
+trap 'bash /stop-container.sh; exit $?' TERM INT
 
 # Configure TLS
 bash /configure-tls.sh
+
+# Start Cron
+crond
 
 # Start ApacheDS
 bash bin/apacheds.sh start

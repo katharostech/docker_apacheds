@@ -34,6 +34,9 @@ RUN chmod 744 /configure-tls.sh
 COPY /update-keystore.sh /update-keystore.sh
 RUN chmod 744 /update-keystore.sh
 
+COPY /stop-container.sh /stop-container.sh
+RUN chmod 744 /stop-container.sh
+
 COPY /docker-cmd.sh /docker-cmd.sh
 RUN chmod 744 /docker-cmd.sh
 
