@@ -33,6 +33,10 @@ volumes:
   apacheds-data:
 ```
 
+### Java Args
+
+You can pass in additional Java arguments with the `JAVA_OPTS` environment variable. For example: `JAVA_OPTS="-Xmx80M"` will set the maximum heap size to 80 megabytes.
+
 ## Using ACME to Generate Certificates
 
 The container can automatically generate and renew trusted certificates verified by LetsEncrypt using DNS verification. This allows you to generate certificates behind a firewall, but only works if you have a [supported DNS provider](https://github.com/Neilpang/acme.sh/blob/master/dnsapi/README.md).
